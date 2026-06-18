@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Crazy Organic — fungi, mind, and the edges of science</title>
+<meta name="description" content="A free newsletter about fungi, mind, and the edges of science — for people who want the wonder and the honesty in the same place. Bold questions, evidence on the table, no gurus." />
+
+<!-- Open Graph / social preview -->
+<meta property="og:title" content="Crazy Organic" />
+<meta property="og:description" content="Fungi, mind, and the edges of science — bold questions, honest answers." />
+<meta property="og:type" content="website" />
+<meta property="og:url" content="https://crazyorganic.com/" />
+
+<style>
+  /* ----------------------------------------------------------------
+     CRAZY ORGANIC — landing page
+     Visual system is still TBD per the Operating Brief (Config).
+     This is a tasteful, deliberately not-generic-AI starting point:
+     a warm "field notebook / cartographic" feel — parchment, ink,
+     a spore-amber accent, and a forest-green deep tone.
+     Swap the palette in :root when the real visual system is set.
+  ----------------------------------------------------------------- */
+  :root {
+    --ink:        #1c1a14;   /* near-black warm ink for body text   */
+    --parchment:  #f4efe2;   /* warm paper background                */
+    --parchment-2:#ece4d2;   /* slightly deeper paper for panels     */
+    --forest:     #20392e;   /* deep forest green (hero, footer)     */
+    --forest-2:   #2c4d3d;
+    --amber:      #c2772b;   /* spore amber accent                   */
+    --amber-deep: #a3621f;
+    --muted:      #6a6353;   /* muted ink for secondary text         */
+    --line:       #d8cdb5;   /* hairlines                            */
+    --serif: "Iowan Old Style", "Palatino Linotype", Palatino, "Book Antiqua", Georgia, serif;
+    --sans:  ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  }
+
+  * { box-sizing: border-box; }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    margin: 0;
+    background: var(--parchment);
+    color: var(--ink);
+    font-family: var(--serif);
+    font-size: 19px;
+    line-height: 1.62;
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+  }
+
+  /* subtle paper texture via layered gradients (no external assets) */
+  body::before {
+    content: "";
+    position: fixed; inset: 0;
+    pointer-events: none;
+    background-image:
+      radial-gradient(circle at 20% 30%, rgba(0,0,0,0.018) 0 1px, transparent 1px),
+      radial-gradient(circle at 70% 60%, rgba(0,0,0,0.018) 0 1px, transparent 1px);
+    background-size: 7px 7px, 11px 11px;
+    z-index: 0;
+  }
+
+  .wrap { position: relative; z-index: 1; }
+
+  a { color: var(--amber-deep); }
+
+  /* ---------- top bar ---------- */
+  header.topbar {
+    display: flex; align-items: center; justify-content: space-between;
+    max-width: 1080px; margin: 0 auto; padding: 22px 28px;
+  }
+  .brand {
+    font-family: var(--sans);
+    font-weight: 700; letter-spacing: 0.22em; text-transform: uppercase;
+    font-size: 15px; color: var(--forest);
+  }
+  .brand .dot { color: var(--amber); }
+  .topbar nav a {
+    font-family: var(--sans); font-size: 13px; letter-spacing: 0.08em;
+    text-transform: uppercase; text-decoration: none; color: var(--muted);
+    margin-left: 22px;
+  }
+  .topbar nav a:hover { color: var(--forest); }
+
+  /* ---------- hero ---------- */
+  .hero {
+    background:
+      linear-gradient(180deg, var(--forest) 0%, var(--forest-2) 100%);
+    color: #f1ece0;
+    overflow: hidden;
+    position: relative;
+  }
+  .hero::after { /* faint contour-line motif */
+    content: ""; position: absolute; inset: 0; opacity: 0.10; pointer-events: none;
+    background-image:
+      repeating-radial-gradient(circle at 80% 20%, transparent 0 26px, rgba(255,255,255,0.5) 26px 27px),
+      repeating-radial-gradient(circle at 12% 95%, transparent 0 34px, rgba(255,255,255,0.4) 34px 35px);
+  }
+  .hero-inner {
+    position: relative; z-index: 1;
+    max-width: 820px; margin: 0 auto; padding: 78px 28px 70px;
+    text-align: center;
+  }
+  .kicker {
+    font-family: var(--sans); font-size: 13px; letter-spacing: 0.18em;
+    text-transform: uppercase; color: var(--amber);
+    margin: 0 0 18px;
+  }
+  .hero h1 {
+    font-size: clamp(34px, 6vw, 56px);
+    line-height: 1.08; margin: 0 0 20px; font-weight: 600;
+    letter-spacing: -0.01em;
+  }
+  .hero .sub {
+    font-size: clamp(18px, 2.4vw, 22px);
+    color: #d9d2c2; margin: 0 auto; max-width: 640px;
+  }
+  .hero .cta-row { margin-top: 34px; }
+
+  .btn {
+    display: inline-block; cursor: pointer;
+    font-family: var(--sans); font-weight: 600; font-size: 16px;
+    letter-spacing: 0.01em;
+    background: var(--amber); color: #1c1208; border: none;
+    padding: 15px 28px; border-radius: 2px;
+    text-decoration: none;
+    transition: background 0.15s ease, transform 0.05s ease;
+  }
+  .btn:hover { background: #d4862f; }
+  .btn:active { transform: translateY(1px); }
+
+  /* ---------- sections ---------- */
+  section { padding: 64px 28px; }
+  .container { max-width: 760px; margin: 0 auto; }
+
+  h2 {
+    font-size: clamp(26px, 3.4vw, 34px);
+    line-height: 1.15; margin: 0 0 22px; color: var(--forest);
+    font-weight: 600;
+  }
+  .lede { font-size: 21px; }
+  p { margin: 0 0 20px; }
+  .label-note { color: var(--muted); font-style: italic; }
+
+  /* what you get */
+  .get { background: var(--parchment-2); border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); }
+  ul.checks { list-style: none; padding: 0; margin: 0; }
+  ul.checks li {
+    position: relative; padding: 0 0 0 38px; margin: 0 0 18px;
+    font-size: 19px;
+  }
+  ul.checks li::before {
+    content: "✦"; position: absolute; left: 6px; top: 0;
+    color: var(--amber); font-size: 18px;
+  }
+
+  /* the handshake / honest framing */
+  .handshake .container {
+    border-left: 4px solid var(--amber);
+    padding-left: 28px;
+  }
+  .handshake h2 { color: var(--forest); }
+
+  /* signup */
+  .signup { background: var(--forest); color: #f1ece0; text-align: center; }
+  .signup h2 { color: #fff; }
+  .signup p { color: #d9d2c2; max-width: 600px; margin-left: auto; margin-right: auto; }
+  .fieldguide-name { color: var(--amber); font-style: italic; }
+
+  form.signup-form {
+    display: flex; gap: 10px; justify-content: center; flex-wrap: wrap;
+    margin: 28px auto 10px; max-width: 520px;
+  }
+  form.signup-form input[type="email"] {
+    flex: 1 1 260px; min-width: 220px;
+    font-family: var(--sans); font-size: 16px;
+    padding: 15px 16px; border: 1px solid #43604f; border-radius: 2px;
+    background: #f4efe2; color: var(--ink);
+  }
+  form.signup-form input[type="email"]:focus {
+    outline: 2px solid var(--amber); border-color: var(--amber);
+  }
+  .form-msg {
+    font-family: var(--sans); font-size: 14px; min-height: 20px;
+    color: var(--amber); margin-top: 6px;
+  }
+  .microcopy {
+    font-family: var(--sans); font-size: 13px; color: #b9b2a2;
+    margin-top: 14px;
+  }
+
+  /* footer */
+  footer {
+    background: #17271f; color: #b9b2a2;
+    font-family: var(--sans); font-size: 13px; line-height: 1.7;
+    text-align: center; padding: 40px 28px;
+  }
+  footer .brand-sm {
+    color: #e8e0cf; letter-spacing: 0.2em; text-transform: uppercase;
+    font-weight: 700; font-size: 13px; display: block; margin-bottom: 8px;
+  }
+  footer a { color: #cf9a55; text-decoration: none; }
+
+  /* honesty tag chips reused inline */
+  .rung {
+    font-family: var(--sans); font-size: 11px; letter-spacing: 0.06em;
+    text-transform: uppercase; color: var(--muted);
+    border: 1px solid var(--line); border-radius: 999px;
+    padding: 2px 9px; white-space: nowrap;
+  }
+
+  @media (max-width: 640px) {
+    body { font-size: 18px; }
+    .topbar nav { display: none; }
+    section { padding: 48px 22px; }
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <header class="topbar">
+    <div class="brand">Crazy Organic<span class="dot">.</span></div>
+    <nav>
+      <a href="#what">What you get</a>
+      <a href="#subscribe">Subscribe</a>
+    </nav>
+  </header>
+
+  <!-- ===================== HERO ===================== -->
+  <div class="hero">
+    <div class="hero-inner">
+      <p class="kicker">Fungi · Mind · The edges of science</p>
+      <h1>The world under your feet is stranger than you were taught.</h1>
+      <p class="sub">A free newsletter for the kind of person who wants the wonder and the honesty in the same place.</p>
+      <div class="cta-row">
+        <a href="#subscribe" class="btn">Get the free field notes</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- ===================== THE PITCH ===================== -->
+  <section>
+    <div class="container">
+      <p class="lede">Fungi are their own kingdom of life — closer to us than to plants — and most of their species have never even been named. Beneath a single forest floor runs a web of fungal threads that trades sugar, water, and maybe something stranger between trees. And at the far edge of all this sit the questions that keep us up at night: Can something think without a brain? What is consciousness, really? Where does one living thing end and another begin?</p>
+      <p><strong>Crazy Organic chases those questions</strong> — the wondrous ones and the unanswered ones — and brings you along for the chase.</p>
+    </div>
+  </section>
+
+  <!-- ===================== WHAT YOU GET ===================== -->
+  <section class="get" id="what">
+    <div class="container">
+      <h2>What you get</h2>
+      <ul class="checks">
+        <li>A free newsletter exploring fungi, mind, and the edges of science — vivid, curious, and genuinely surprising.</li>
+        <li>Every claim labeled for what it is: settled science, a live debate, an early hint, a philosophical argument, or a beautiful guess. You'll always know which is which.</li>
+        <li>Sources shown, not name-dropped. We show our work — because we're explorers, not the experts in the room.</li>
+        <li>No hype, no gurus, no $60 gummies sold on vibes.</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- ===================== THE HANDSHAKE ===================== -->
+  <section class="handshake">
+    <div class="container">
+      <h2>Our deal with you</h2>
+      <p>We ask big, bold questions — bigger than careful science writing usually risks. But we never dress a guess up as a fact to make the story land.</p>
+      <p>When something is established, we'll say so plainly. When it's contested, we'll show you both camps. When it's a gorgeous, unprovable idea, we'll call it that — and enjoy it anyway. The wonder is real precisely because the honesty is.</p>
+      <p class="label-note">“We don't know yet” is one of our favorite sentences.</p>
+    </div>
+  </section>
+
+  <!-- ===================== SIGNUP ===================== -->
+  <section class="signup" id="subscribe">
+    <div class="container">
+      <h2>Start with the field notes</h2>
+      <p>Get our free field guide, <span class="fieldguide-name">“Does the Mycelium Think? — field notes from the edge of fungal science.”</span> It's the brand in a few pages: the most astonishing real things about fungi, and the genuinely open questions about mind — each one honestly tagged as known, contested, or open.</p>
+
+      <!-- ==========================================================
+           EMAIL SIGNUP FORM
+           Currently a PLACEHOLDER — it does not collect emails yet.
+           TO ACTIVATE WITH MAILCHIMP (or similar) later:
+             1. In Mailchimp: Audience > Signup forms > Embedded form.
+             2. Copy the form's "action" URL and paste it into the
+                form's action="" below (replace MAILCHIMP_ACTION_URL).
+             3. Make sure the email input's name is "EMAIL" (Mailchimp
+                default) — it already is below.
+             4. Mailchimp also needs a hidden anti-bot field; paste the
+                block Mailchimp gives you (looks like a hidden <div>
+                with a tabindex input) where marked.
+             5. Delete the JavaScript "placeholder handler" at the
+                bottom of this file so the form submits for real.
+           Until then, the handler below shows a friendly message
+           instead of silently failing.
+      =========================================================== -->
+      <form class="signup-form" id="signupForm"
+            action="MAILCHIMP_ACTION_URL" method="post" target="_blank" novalidate>
+        <input type="email" name="EMAIL" id="emailField"
+               placeholder="you@example.com" aria-label="Email address" required />
+        <!-- Mailchimp anti-bot hidden field goes here when you wire it up -->
+        <button type="submit" class="btn">Get the field notes</button>
+      </form>
+      <div class="form-msg" id="formMsg" role="status" aria-live="polite"></div>
+
+      <p class="microcopy">Free forever. No spam, no selling you anything, unsubscribe in one click. Just wonder, honestly.</p>
+    </div>
+  </section>
+
+  <!-- ===================== FOOTER ===================== -->
+  <footer>
+    <span class="brand-sm">Crazy Organic</span>
+    Fungi, mind, and the edges of science. Wonder, honestly.<br />
+    Find us on X: <a href="https://x.com/thecrazyorganic" target="_blank" rel="noopener">@thecrazyorganic</a><br />
+    <span style="opacity:0.7">© <span id="year"></span> Crazy Organic</span>
+  </footer>
+
+</div>
+
+<script>
+  document.getElementById('year').textContent = new Date().getFullYear();
+
+  /* -----------------------------------------------------------------
+     PLACEHOLDER FORM HANDLER
+     Signups aren't live yet (no email service connected). Instead of
+     silently failing, we intercept the submit and show a message.
+     DELETE THIS WHOLE <script> BLOCK once the Mailchimp action URL is
+     wired into the form above, so the form posts for real.
+  ------------------------------------------------------------------ */
+  (function () {
+    var form = document.getElementById('signupForm');
+    var msg  = document.getElementById('formMsg');
+    var notWired = form.getAttribute('action') === 'MAILCHIMP_ACTION_URL';
+    if (!notWired) return; // form is wired to a real service — let it submit
+
+    form.addEventListener('submit', function (e) {
+      e.preventDefault();
+      var email = document.getElementById('emailField').value.trim();
+      if (!email || email.indexOf('@') === -1) {
+        msg.textContent = "Pop in a valid email and we'll be ready for you.";
+        return;
+      }
+      msg.textContent = "Signups open very soon — thanks for being early. Come find us @thecrazyorganic in the meantime.";
+      form.reset();
+    });
+  })();
+</script>
+</body>
+</html>
