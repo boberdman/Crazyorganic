@@ -1,71 +1,55 @@
 # Crazy Organic — static site (GitHub Pages)
 
-A single-page landing site for Crazy Organic. Built to be hosted free on GitHub Pages.
-Copy is the approved subscribe-page voice; the visual system is a tasteful starting point
-only — the real one is still TBD per the Operating Brief.
+Field-guide static site for Crazy Organic. Hosted free on GitHub Pages at crazyorganic.com.
+Look follows **Visual System — Crazy Organic** (Drive): herbarium-earth palette, Fraunces /
+Inter / IBM Plex Mono, and the signature epistemic-stamp device. Framework is plain static
+HTML with one shared stylesheet — no build step.
 
-Files:
-- `index.html` — the whole site (self-contained: HTML + CSS + a little JS, no dependencies)
-- `CNAME` — the custom domain (`crazyorganic.com`). Delete this if you're not using a custom domain yet.
+## Files
+```
+index.html                                  homepage
+issues/index.html                           the archive (all issues)
+issues/how-life-got-sorted-into-boxes.html  Series A · Ep. 1
+issues/TEMPLATE.html                         copy this to add a new issue
+styles.css                                  shared styling for every page
+.nojekyll                                   serve files as-is (no Jekyll processing)
+CNAME                                       custom domain (crazyorganic.com)
+```
 
----
+## Local preview
+Open `index.html` in a browser. Web fonts load from Google Fonts; everything else is local.
+(Internal links use relative paths, so previewing from the file system works.)
 
-## What this site does and doesn't do
+## Add a new issue
+1. Copy `issues/TEMPLATE.html` to `issues/<url-slug>.html`.
+2. Fill the `<!-- FILL: ... -->` markers (title, series/episode/pillar/date, body, sources).
+3. Mark claims with the epistemic stamp, e.g.
+   `<span class="stamp inline stamp--established">Established</span>`
+   Rungs: `established` `contested` `preliminary` `philosophy` `speculation` `folklore`.
+4. Add a card for it in `issues/index.html` (copy the existing `<li>` block).
+5. Optionally update the "From the field journal" teaser on `index.html`.
 
-- ✅ Public landing page with the brand promise, "what you get," the honest-framing handshake,
-  and the field-notes call to action.
-- ⚠️ The email signup form is a **placeholder**. It does NOT collect emails yet. It shows a
-  friendly "signups open soon" message instead of silently failing. Wire it to Mailchimp
-  (steps below) when you're ready to start the list.
+## Signup form
+The subscribe block (on the homepage and every issue page) wraps your existing **Google Form**
+embed, which writes to your Google Sheet. Copy is honest: it promises dispatches when ready,
+not an instant download (there's no email-sending system or lead-magnet PDF yet).
 
----
+- To change the form, edit it in Google Forms — the embed updates automatically. The embed
+  URL is the one provided; it appears identically in `index.html`, `issues/index.html`,
+  `issues/how-life-got-sorted-into-boxes.html`, and `issues/TEMPLATE.html`.
+- Optional upgrade (not done, by choice): a custom on-brand form posting to the same Google
+  Form `formResponse` endpoint would look seamless, but it can't confirm success and could
+  silently drop signups if the form changes — risky for the email list. The iframe is
+  bulletproof. Say the word if you'd rather have the prettier version.
 
-## Deploy to GitHub Pages (your steps — needs your GitHub account)
+## Deploy (your steps — your GitHub account)
+1. Commit and push to `https://github.com/boberdman/Crazyorganic.git` (main).
+2. Repo **Settings → Pages**: Source = Deploy from a branch, `main` / root.
+3. Custom domain + HTTPS: `CNAME` already holds `crazyorganic.com`; confirm the domain and
+   tick "Enforce HTTPS" in Settings → Pages once the certificate issues.
 
-These touch your account, so they're yours to do:
-
-1. Create a new GitHub repository.
-   - For a user site at `https://<username>.github.io`, name the repo exactly
-     `<username>.github.io`.
-   - For a project site, any repo name works; the URL becomes
-     `https://<username>.github.io/<repo>/`.
-2. Upload `index.html` (and `CNAME` if using the custom domain) to the repo root.
-3. In the repo: **Settings → Pages**. Under "Build and deployment," set Source to
-   **Deploy from a branch**, branch `main`, folder `/ (root)`. Save.
-4. Wait a minute, then visit the URL GitHub shows on that Pages screen.
-
-## Custom domain — crazyorganic.com (your DNS, your call)
-
-1. Keep the `CNAME` file in the repo root (it contains `crazyorganic.com`).
-2. At your domain registrar's DNS settings, point the domain at GitHub Pages:
-   - Apex domain `crazyorganic.com` → four A records to GitHub's IPs
-     (`185.199.108.153`, `185.199.109.153`, `185.199.110.153`, `185.199.111.153`),
-     **and** an AAAA set if you want IPv6.
-   - `www` → a CNAME record pointing to `<username>.github.io`.
-   - Confirm current GitHub Pages IPs in their docs at deploy time — they can change.
-3. Back in **Settings → Pages**, enter `crazyorganic.com` as the custom domain and tick
-   **Enforce HTTPS** once the certificate is issued.
-
----
-
-## Turn the signup on later (Mailchimp or similar)
-
-The form in `index.html` is pre-wired so this is a 2-minute job:
-
-1. In Mailchimp: **Audience → Signup forms → Embedded form**.
-2. Copy the form's `action` URL.
-3. In `index.html`, find `action="MAILCHIMP_ACTION_URL"` and paste the real URL in.
-4. The email field is already named `EMAIL` (Mailchimp's default) — no change needed.
-5. Paste Mailchimp's hidden anti-bot field where the comment marks it.
-6. **Delete the `<script>` placeholder block at the bottom of `index.html`** so the form
-   submits for real instead of showing the "coming soon" message.
-
-Any email tool with an embeddable form (Buttondown, MailerLite, ConvertKit, Kit, etc.)
-works the same way — paste its action URL, match the email field name, remove the placeholder script.
-
----
-
-## Notes
-- Edit copy directly in `index.html` — sections are clearly commented.
-- The page is responsive and has no external requests (good for privacy and speed).
-- When the brand's real visual system is set, swap the colors in the `:root` block near the top of the CSS.
+## Notes / flags
+- **Web fonts** load from Google Fonts (Google sees visitors' IPs). Standard for a marketing
+  site; system-font fallbacks are in place if it's ever blocked. Can be self-hosted later.
+- The homepage was restyled to match the Visual System doc (fonts, exact palette, stamp
+  device). Structure and content are unchanged from the live site.

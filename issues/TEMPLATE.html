@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<!-- =====================================================================
+     CRAZY ORGANIC — ISSUE TEMPLATE
+     HOW TO ADD A NEW ISSUE:
+       1. Copy this file to issues/<url-slug>.html
+          (e.g. issues/does-the-wood-wide-web-talk.html)
+       2. Fill every <!-- FILL: ... --> marker below.
+       3. Mark claims with the epistemic stamp device:
+            <span class="stamp inline stamp--established">Established</span>
+          Rungs: established · contested · preliminary · philosophy · speculation · folklore
+       4. List your sources in the "Sources / show the work" section.
+       5. Add a card for the issue to issues/index.html (archive).
+       Paths are relative: this file lives in /issues/, so CSS = ../styles.css
+       The masthead, signup block, and footer are identical across the site —
+       don't edit their structure here; just duplicate.
+     ===================================================================== -->
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title><!-- FILL: Issue title --> — Crazy Organic</title>
+<meta name="description" content="<!-- FILL: 1-sentence description / preview text -->" />
+<meta property="og:title" content="<!-- FILL: Issue title -->" />
+<meta property="og:description" content="<!-- FILL: preview text -->" />
+<meta property="og:type" content="article" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;0,9..144,700;1,9..144,400&family=IBM+Plex+Mono:ital,wght@0,400;0,500;0,600;1,400&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="../styles.css" />
+</head>
+<body>
+
+<!-- ===== MASTHEAD (identical site-wide) ===== -->
+<header class="topbar">
+  <a class="wordmark" href="../index.html">
+    <span class="spore" aria-hidden="true"></span>
+    <span class="name">Crazy Organic</span>
+  </a>
+  <nav>
+    <a href="index.html" class="active">Issues</a>
+    <a href="#subscribe">Subscribe</a>
+  </nav>
+</header>
+
+<!-- ===== ISSUE HEADER ===== -->
+<div class="issue-header">
+  <div class="container measure">
+    <div class="specimen-strip">
+      <span>Series <!-- FILL: A --></span><span class="sep">·</span>
+      <span>Episode <!-- FILL: 1 --></span><span class="sep">·</span>
+      <span>Pillar <!-- FILL: 1 — The unexplored kingdom --></span><span class="sep">·</span>
+      <span>Cat. <!-- FILL: CO-A-01 --></span><span class="sep">·</span>
+      <span><!-- FILL: 2026-06-21 --></span>
+    </div>
+    <h1 class="issue-title"><!-- FILL: Issue title --></h1>
+    <p class="issue-dek"><!-- FILL: dek / standfirst (the preview text expanded to a sentence) --></p>
+  </div>
+</div>
+
+<hr class="rule" />
+
+<!-- ===== ARTICLE BODY ===== -->
+<article class="section">
+  <div class="container measure article">
+
+    <p class="lede first-lead"><!-- FILL: opening hook paragraph --></p>
+
+    <h3><!-- FILL: section subhead --></h3>
+    <p><!-- FILL: body... mark claims inline, e.g.
+       This is a plain fact <span class="stamp inline stamp--established">Established</span>,
+       and this is still being argued <span class="stamp inline stamp--contested">Contested</span>. --></p>
+
+    <!-- Optional: a highlighted claim row -->
+    <div class="claim-row">
+      <span class="claim-txt"><!-- FILL: the claim, quoted --></span>
+      <span class="stamp stamp--established">Established</span>
+    </div>
+
+    <!-- The brand's signature honesty beat -->
+    <div class="honest">
+      <h3>Where we get honest</h3>
+      <p><!-- FILL: what we don't know / what's contested / where we get out of our depth --></p>
+    </div>
+
+  </div>
+</article>
+
+<!-- ===== SOURCES / SHOW THE WORK ===== -->
+<section class="section--tight band">
+  <div class="container measure sources">
+    <h2 class="head">Sources &mdash; show the work</h2>
+    <ol>
+      <li><span class="claimlabel"><!-- FILL: claim --></span> — <a href="#"><!-- FILL: source + URL --></a></li>
+      <!-- repeat -->
+    </ol>
+  </div>
+</section>
+
+<!-- ===== EPISTEMIC LABELS SUMMARY ===== -->
+<section class="section--tight">
+  <div class="container measure">
+    <h2 class="head">How we labeled it</h2>
+    <ul class="labels-list">
+      <li>
+        <span class="lab-stamp"><span class="stamp stamp--established">Established</span></span>
+        <span class="lab-claim"><!-- FILL: claim --></span>
+      </li>
+      <li>
+        <span class="lab-stamp"><span class="stamp stamp--contested">Contested</span></span>
+        <span class="lab-claim"><!-- FILL: claim --></span>
+      </li>
+      <!-- repeat as needed -->
+    </ul>
+    <div class="legend">
+      <span class="stamp stamp--established">Established</span>
+      <span class="stamp stamp--contested">Contested</span>
+      <span class="stamp stamp--preliminary">Preliminary</span>
+      <span class="stamp stamp--philosophy">Philosophy</span>
+      <span class="stamp stamp--speculation">Speculation</span>
+      <span class="stamp stamp--folklore">Folklore</span>
+    </div>
+  </div>
+</section>
+
+<!-- ===== SIGNUP BLOCK (identical site-wide) ===== -->
+<section class="signup section" id="subscribe">
+  <div class="container">
+    <div class="specimen-strip" style="justify-content:center"><span>Field station</span><span class="sep">·</span><span>Subscribe</span></div>
+    <h2 class="head" style="text-align:center">Get the next dispatch</h2>
+    <p style="text-align:center; max-width:560px; margin:0 auto">Crazy Organic is just getting started. Drop your email and we'll send the next dispatch &mdash; new issues from the unmapped kingdom, each claim honestly labeled &mdash; straight to your inbox when it's ready. No instant download, no welcome bot: nothing lands in your inbox until there's something worth it.</p>
+    <div class="signup-card">
+      <iframe title="Subscribe to Crazy Organic" src="https://docs.google.com/forms/d/e/1FAIpQLSexLBGUZ-bahiGFEYfe5A00Je7VW7LARPAEokdJCGZ_cqLuTw/viewform?embedded=true" loading="lazy">Loading the subscribe form…</iframe>
+    </div>
+    <p class="microcopy" style="text-align:center"><strong>Free.</strong> No spam. Unsubscribe anytime. Dispatches only &mdash; nothing auto-delivered yet.</p>
+  </div>
+</section>
+
+<!-- ===== FOOTER (identical site-wide) ===== -->
+<footer class="site">
+  <span class="wm">Crazy Organic</span>
+  Fungi, mind, and the edges of science. Wonder, honestly.<br />
+  Find us on X: <a href="https://x.com/thecrazyorganic" target="_blank" rel="noopener">@thecrazyorganic</a><br />
+  <span style="opacity:.7">&copy; <span id="yr"></span> Crazy Organic</span>
+</footer>
+<script>document.getElementById('yr').textContent = new Date().getFullYear();</script>
+
+</body>
+</html>
