@@ -389,3 +389,48 @@ footer.site a:hover { color: var(--amber); }
   .hero--feature .hero-inner { padding: 54px 24px 52px; }
   .deal-card { padding: 24px 22px; }
 }
+
+/* ============================================================
+   EPISTEMIC STAMPS ON DARK GROUNDS (hero / signup / footer)
+   The base .stamp is tuned for light paper: ink text, a dark
+   border, and translucent rung backgrounds. On the dark
+   forest-ink hero those read as ink-on-ink — the "Established"
+   and "Preliminary" stamps all but vanish. Re-tune them here
+   for the dark ground: light text, a light hairline border (the
+   per-rung border-STYLE still encodes certainty), and lifted
+   rung chips so the dot stays visible. Light-ground stamps are
+   untouched.
+   ============================================================ */
+.hero .stamp,
+.signup .stamp {
+  color: #f3eede;
+  background: rgba(237, 231, 214, 0.10);
+  border-color: rgba(237, 231, 214, 0.45);
+}
+/* keep each rung's certainty cue (border-style), just relit for dark */
+.hero .stamp--established,
+.signup .stamp--established { border-style: solid; background: rgba(155, 177, 140, 0.16); }
+.hero .stamp--contested,
+.signup .stamp--contested   { border-style: dashed; }
+.hero .stamp--preliminary,
+.signup .stamp--preliminary { border-style: dotted; }
+.hero .stamp--philosophy,
+.signup .stamp--philosophy  { border-style: double; border-width: 3px; }
+.hero .stamp--speculation,
+.signup .stamp--speculation { border-style: dashed; border-color: rgba(237, 231, 214, 0.55); font-style: italic; }
+.hero .stamp--folklore,
+.signup .stamp--folklore    { border-style: dotted; border-color: rgba(237, 231, 214, 0.55); font-style: italic; }
+
+/* rung chips, lightened so the dot reads on forest ink */
+.hero .stamp--established::before,
+.signup .stamp--established::before { background: #9BB18C; }
+.hero .stamp--contested::before,
+.signup .stamp--contested::before   { background: #D79A4A; }
+.hero .stamp--preliminary::before,
+.signup .stamp--preliminary::before { background: #C7B074; }
+.hero .stamp--philosophy::before,
+.signup .stamp--philosophy::before  { background: #5FB6A8; }
+.hero .stamp--speculation::before,
+.signup .stamp--speculation::before { background: #5FB6A8; }
+.hero .stamp--folklore::before,
+.signup .stamp--folklore::before    { background: #C29FBA; }
