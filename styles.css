@@ -330,3 +330,62 @@ footer.site a:hover { color: var(--amber); }
 
 /* respect reduced motion */
 @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
+
+/* ============================================================
+   HOMEPAGE v2 — latest-issue feature hero + field-journal grid
+   (Adopts the reorganized homepage layout; reuses the existing
+   palette, fonts, texture, cards, and stamp device.)
+   ============================================================ */
+
+/* feature hero: left-aligned variant of .hero that fronts the latest issue */
+.hero--feature .hero-inner { text-align: left; max-width: 880px; padding: 72px 28px 76px; }
+.hero .feature-meta { display: flex; flex-wrap: wrap; gap: 10px 16px; align-items: center; margin: 0 0 22px; }
+.hero .feature-meta .kick { font-family: var(--mono); font-size: 12.5px; letter-spacing: 0.16em; text-transform: uppercase; color: var(--foxfire); margin: 0; }
+.hero .feature-meta .ep { font-family: var(--mono); font-size: 13px; letter-spacing: 0.04em; text-transform: uppercase; color: #9aa394; }
+.hero .feature-meta .sep { color: #9aa394; opacity: 0.6; }
+.hero--feature h1 { max-width: 18ch; }
+.hero--feature .sub { margin: 0 0 30px; max-width: 62ch; }
+.hero--feature .cta-row { margin-top: 0; display: flex; gap: 16px 20px; align-items: center; flex-wrap: wrap; }
+
+/* pillar tag pill (on the dark hero) */
+.pill { font-family: var(--mono); font-size: 11px; letter-spacing: 0.08em; text-transform: uppercase; color: var(--paper); border: 1px solid rgba(95,182,168,0.55); border-radius: 999px; padding: 3px 11px; line-height: 1.4; }
+
+/* field-journal: intro + per-series subheads */
+.section-intro { color: var(--ink-soft); max-width: 60ch; margin: 0 0 6px; }
+.series-head { margin: 34px 0 4px; display: flex; flex-wrap: wrap; gap: 8px 14px; align-items: center; }
+.series-head:first-of-type { margin-top: 10px; }
+.series-head .series-name { font-family: var(--mono); font-size: 12px; letter-spacing: 0.08em; text-transform: uppercase; color: var(--ink); }
+.series-head .series-tag { font-family: var(--mono); font-size: 12px; letter-spacing: 0.06em; text-transform: uppercase; color: var(--muted); }
+.series-note { font-family: var(--mono); font-size: 12px; letter-spacing: 0.04em; color: var(--muted); margin: 0 0 18px; }
+
+/* field-journal card grid (reuses .issue-card) */
+.issue-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 18px; margin: 0; }
+.issue-grid .issue-card { position: relative; overflow: hidden; height: 100%; margin: 0; display: flex; flex-direction: column; }
+.issue-grid .issue-card .specimen-strip,
+.issue-grid .issue-card h3,
+.issue-grid .issue-card p { position: relative; }
+.issue-grid .issue-card .more { margin-top: auto; }
+.issue-card .num-ghost { position: absolute; top: 4px; right: 16px; pointer-events: none; user-select: none; font-family: var(--serif); font-weight: 600; font-size: 62px; line-height: 1; color: var(--amber); opacity: 0.13; }
+
+/* archive link under the journal */
+.archive-link { text-align: center; margin: 30px 0 0; }
+.archive-link a { font-family: var(--mono); font-size: 13px; letter-spacing: 0.04em; text-transform: uppercase; color: var(--moss); text-decoration: none; }
+.archive-link a:hover { color: var(--amber); }
+
+/* square bullets (the new system retires the diamond bullet) */
+.checks--sq li { padding-left: 30px; }
+.checks--sq li::before { content: ""; width: 7px; height: 7px; border-radius: 2px; background: var(--amber); position: absolute; left: 2px; top: 11px; }
+
+/* stamp swatch row */
+.stamp-swatches { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 24px; }
+
+/* "our deal with you" as a bordered amber card (v2) */
+.deal-card { border: 1px solid var(--amber); border-left-width: 4px; border-radius: 4px; background: rgba(185,119,46,0.06); padding: 30px 32px; }
+.deal-card h2.head { margin-top: 0; }
+.deal-card .qquote { font-family: var(--serif); font-style: italic; color: var(--moss); font-size: 22px; margin: 0; }
+
+@media (max-width: 640px) {
+  .issue-grid { grid-template-columns: 1fr; }
+  .hero--feature .hero-inner { padding: 54px 24px 52px; }
+  .deal-card { padding: 24px 22px; }
+}
