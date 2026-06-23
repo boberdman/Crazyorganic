@@ -7,8 +7,8 @@ Work in flight, owned by Operations. Mirrors the original Work Log (Sheet); kept
 
 | Cat. | Title | Pillar | State | Owner | Created | Staged/Link | Notes |
 |---|---|---|---|---|---|---|---|
-| CO-C-02 | The Mind-Snatcher (Ophiocordyceps) | 1 | staged | Editor/QA | 2026-06-23 | `drafts/the-mind-snatcher.html` | Series C — Bestiary Ep.2 (backlog A2). QA APPROVED, 0 revision rounds. Mostly Established; mechanism flagged Preliminary/Contested (first non-Established rung — balance healthy). "Mind control" trope pre-empted in drafting (brain spared). Loop trail: `loops/CO-C-02-the-mind-snatcher.md`. |
-| CO-C-01 | The Fastest Launch in Nature (Pilobolus) | 1 | staged | Editor/QA | 2026-06-23 | `drafts/the-fastest-launch-in-nature.html` | Series C — Bestiary Ep.1. QA APPROVED, 1 revision round (title de-hyped "faster than a bullet" → acceleration framing). All claims Established. |
+| CO-C-02 | The Mind-Snatcher (Ophiocordyceps) | 1 | publish-ready | Editor/QA | 2026-06-23 | `issues/the-mind-snatcher.html` | Series C — Bestiary Ep.2 (backlog A2). QA APPROVED, 0 revision rounds. Mostly Established; mechanism flagged Preliminary/Contested. Promoted drafts/ → issues/ 2026-06-23; archive card + homepage "latest" teaser updated. Awaiting Bob's push. Loop trail: `loops/CO-C-02-the-mind-snatcher.md`. |
+| CO-C-01 | The Fastest Launch in Nature (Pilobolus) | 1 | publish-ready | Editor/QA | 2026-06-23 | `issues/the-fastest-launch-in-nature.html` | Series C — Bestiary Ep.1. QA APPROVED, 1 revision round (title de-hyped → acceleration framing). All claims Established. Promoted drafts/ → issues/ 2026-06-23; Series C archive section created. Awaiting Bob's push. |
 | CO-A-06 | The Kingdom We've Barely Met | 1 | publish-ready | Editor/QA | 2026-06-21 | `issues/the-kingdom-weve-barely-met.html` | QA APPROVED; staged. |
 | CO-A-05 | The Largest Living Thing Is a Fungus | 1 | publish-ready | Editor/QA | 2026-06-21 | `issues/the-largest-living-thing-is-a-fungus.html` | QA APPROVED; staged. |
 | CO-A-0? | Deep Time | 1 | publish-ready | Editor/QA | 2026-06-21 | `issues/deep-time.html` | QA APPROVED (v2); staged. |

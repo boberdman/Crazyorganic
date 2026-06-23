@@ -11,8 +11,8 @@ The brand's institutional memory and forward map (owned by Research) — distinc
 
 | Cat. | Date | Pillar | Title | Rung(s) | State |
 |---|---|---|---|---|---|
-| CO-C-02 | 2026-06-23 | 1 | The Mind-Snatcher (Ophiocordyceps) | established + preliminary/contested | staged |
-| CO-C-01 | 2026-06-23 | 1 | The Fastest Launch in Nature (Pilobolus) | established | staged |
+| CO-C-02 | 2026-06-23 | 1 | The Mind-Snatcher (Ophiocordyceps) | established + preliminary/contested | publish-ready |
+| CO-C-01 | 2026-06-23 | 1 | The Fastest Launch in Nature (Pilobolus) | established | publish-ready |
 | CO-B-01 | 2026-06-21 | 4 | Do Functional Mushrooms Actually Do Anything? | contested/preliminary | publish-ready |
 | CO-A-06 | 2026-06-21 | 1 | The Kingdom We've Barely Met | established | publish-ready |
 | CO-A-05 | 2026-06-21 | 1 | The Largest Living Thing Is a Fungus | established | publish-ready |
