@@ -11,6 +11,7 @@ The brand's institutional memory and forward map (owned by Research) — distinc
 
 | Cat. | Date | Pillar | Title | Rung(s) | State |
 |---|---|---|---|---|---|
+| CO-C-03 | 2026-06-25 | 1 | Lanterns in the Litter (foxfire) | established + contested (function) | publish-ready |
 | CO-C-02 | 2026-06-23 | 1 | The Mind-Snatcher (Ophiocordyceps) | established + preliminary/contested | publish-ready |
 | CO-C-01 | 2026-06-23 | 1 | The Fastest Launch in Nature (Pilobolus) | established | publish-ready |
 | CO-B-01 | 2026-06-21 | 4 | Do Functional Mushrooms Actually Do Anything? | contested/preliminary | publish-ready |
@@ -20,6 +21,8 @@ The brand's institutional memory and forward map (owned by Research) — distinc
 | CO-A-0? | 2026-06-21 | 1 | The Things That Eat the World From the Outside | established | publish-ready |
 | CO-A-02 | 2026-06-21 | 1 | Your Weird Cousin, the Mushroom | established | publish-ready |
 | CO-A-01 | 2026-06-21 | 1 | How Life Got Sorted Into Boxes | established | publish-ready |
+
+**CO-C-03 detail —** *Lanterns in the Litter.* Core claims: foxfire is genuine fungal bioluminescence in decaying wood — cold light documented since Aristotle (~382 BC) and Pliny, used to light the *Turtle* submarine's compass (Franklin only later consulted), traced to fungi in **1823**; ~**130** known luminescent fungal species (≈doubled in ~15 yrs) across several Agaricales lineages (*Armillaria*, *Omphalotus*, *Panellus stipticus*), nearly all emitting green light ~**520–530 nm**; the light is a luciferin (**3-hydroxyhispidin**, from **caffeic acid**)–luciferase reaction whose **full pathway was solved in 2018** (first complete eukaryotic bioluminescence pathway; transplanted into yeast and plants to make them glow). All **established**. The **function** ("why glow?") is **contested**: *Neonothopanus gardneri* uses a circadian-timed glow to attract spore-dispersing insects (Oliveira 2015), but the ghost fungus *Omphalotus nidiformis* glow attracted none (Weinstein 2016), and many fungi glow in buried mycelium — so the purpose likely varies, and may be an incidental metabolic by-product in some. Get-it-right beats: Franklin did *not* originate the *Turtle* foxfire idea; bioluminescence (enzymatic chemiluminescence) ≠ stored/phosphorescent light. Format: newsletter + 3 X posts. Loop trail: `loops/CO-C-03-lanterns-in-the-litter.md`. QA: APPROVED, 1 revision round (3 citation corrections). Performance (Analyst): — pending.
 
 **CO-C-02 detail —** *The Mind-Snatcher.* Core claims: *Ophiocordyceps* steers infected *Camponotus* ants to bite abaxial leaf veins ~25 cm up (solar-noon-synchronized in the studied population), forming a "death grip" via hyper-contracted/atrophied mandibular muscle; the fungus networks around the body's muscles but **leaves the brain uninvaded** (Fredericksen 2017); it is a **species complex** reclassified from *Cordyceps*. All **established** — except the **mechanism of control**, flagged **preliminary/contested** (candidate compounds + circadian-gene disruption; no single molecule confirmed). Honesty beats: "body-snatcher," not literal "mind control"; *The Last of Us* is fiction (insect-specialized, no human infection). Format: newsletter + 3 X posts. Loop trail: `loops/CO-C-02-the-mind-snatcher.md`. QA: APPROVED, 0 revision rounds. Performance (Analyst): — pending.
 
@@ -34,7 +37,7 @@ The brand's institutional memory and forward map (owned by Research) — distinc
 - **Pillar 3 — Consciousness at the edge (bold):** Not yet covered. Grounded on-ramp (Theme J) starts Q1–Q2; boldest material (Themes K, L) banked for Q3–Q4.
 - **Pillar 4 — What's real vs. what's sold (grounding):** One piece live (CO-B-01). Methods-literacy (Theme E) front-loaded in Q1; the supplement series (Theme D) runs steadily all year; psychedelics journalism (Theme F) mid-late.
 
-**Epistemic balance:** Currently established-dominant (good — we're banking credibility early). CO-C-02 introduces the first **preliminary/contested** rungs (the unsolved *mechanism* of *Ophiocordyceps* manipulation), wrapped in an otherwise established piece — a healthy way to start exercising the non-established rungs without drifting into speculation. Plan keeps grounded pillars (1+4 = 56 eps) ahead of frontier (2+3 = 48 eps); speculation concentrated in Themes I and L, scheduled last. Guardrail healthy.
+**Epistemic balance:** Currently established-dominant (good — we're banking credibility early). CO-C-02 introduced the first **preliminary/contested** rungs (the unsolved *mechanism* of *Ophiocordyceps* manipulation); CO-C-03 adds a clean **contested** beat on the *function* of fungal glow (demonstrated spore-attraction in one species, null in another) — both wrapped in otherwise established pieces. A healthy way to keep exercising the non-established rungs without drifting into speculation. Plan keeps grounded pillars (1+4 = 56 eps) ahead of frontier (2+3 = 48 eps); speculation concentrated in Themes I and L, scheduled last. Guardrail healthy.
 
 ---
 
@@ -49,7 +52,7 @@ The brand's institutional memory and forward map (owned by Research) — distinc
 **Series C · Theme A — A Bestiary of the Unexplored Kingdom** · Q1 · established
 - `covered` A1. **The Fastest Launch in Nature** — *Pilobolus*, the hat-thrower, fires spores at the highest acceleration in nature, aimed at the light. (P1 · established) — *CO-C-01, staged 2026-06-23. Title revised from backlog's "Faster Than a Bullet."*
 - `covered` A2. **The Mind-Snatcher** — *Ophiocordyceps* drives an ant to a precise death-grip before erupting from its head. (P1 · established; mechanism preliminary/contested) — *CO-C-02, staged 2026-06-23.*
-- `planned` A3. **Lanterns in the Litter** — foxfire: the fungi that really glow in the dark, and why. (P1 · established)
+- `covered` A3. **Lanterns in the Litter** — foxfire: the fungi that really glow in the dark, and why. (P1 · established; *function* contested) — *CO-C-03, staged 2026-06-25.*
 - `planned` A4. **The Fungus That Eats Radiation** — Chernobyl's black molds that grow toward radioactivity. (P1 · established; mechanism preliminary)
 - `planned` A5. **Caps That Dissolve Themselves** — inky caps that liquefy into black ink to spread their spores. (P1 · established)
 - `planned` A6. **Nature's Tiniest Cannons** — bird's-nest fungi and the splash-cup physics that fires spore packets. (P1 · established)
