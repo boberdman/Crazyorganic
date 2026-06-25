@@ -95,3 +95,14 @@ Permanent human-gate item (health/therapeutic claim, Config §8 / §4 #3 / §5) 
 - **The gate (unchanged, Config §8):** `git commit` + `git push` remain **Bob's** manual action. Nothing committed, nothing pushed.
 - **Escalation to Bob:** §5 health-claim sign-off required before any push. Specific item for Bob to optionally harden: the allergy **case-report citation** (verified via the 2025 systematic review's safety section; underlying primary not independently opened).
 - **Open for Bob (carried from prior episodes):** ratify the Series ↔ Theme letter map (Series B = Theme D).
+
+### D.1 · Promotion to publish-ready (2026-06-25, after Bob's §5 sign-off)
+
+Bob reviewed the draft and cleared the §5 health-claim gate ("draft looks good, let's publish"). Per the spec, that human sign-off is exactly what the permanent gate requires — so the issue was promoted from `drafts/` to publish-ready (still short of the live web, which is Bob's push):
+
+- **Promoted:** `drafts/lions-mane-and-the-memory-question.html` → `issues/lions-mane-and-the-memory-question.html`. Done as a file copy + delete (the `drafts/` original removed), **not** `git mv` — no git is run in the repo (see below). Issues-relative nav path corrected (`Issues` link → `index.html`).
+- **issues/index.html:** Series B archive card added (Ep. 2, 2026-06-25).
+- **index.html (homepage):** "Latest issue" hero set to CO-B-02 (Preliminary + Contested stamps); Series B grid card added (Ep. 2). Prior latest (Lanterns / CO-C-03) remains in the Series C grid; hero now points to the Series B piece.
+- **WORK-LOG.md / TOPIC-LEDGER.md:** CO-B-02 flipped `staged` → `publish-ready`, links repointed to `issues/`.
+- **No git run, by rule.** Verification of the promotion used a plain file listing (`ls`), not `git status` — a prior Stage-4 `git status` orphaned a `.git/index.lock` (the bind mount blocks git from cleaning up its own lock), which blocked Bob's commit. Standing rule now: the Loop-Runner never invokes git in the repo, including read-only commands.
+- **The gate (unchanged, Config §8):** `git commit` + `git push` remain **Bob's** manual action. Nothing committed, nothing pushed. Bob must also `rm .git/index.lock` (left over from the earlier status check; the sandbox can't remove it) before his commit will succeed.
